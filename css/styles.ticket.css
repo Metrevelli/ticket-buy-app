@@ -1,0 +1,44 @@
+.ticket{
+    width:600px;
+    height:200px;
+    -webkit-box-shadow: 6px 6px 32px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 32px -1px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 32px -1px rgba(0,0,0,0.75);
+    overflow:hidden;
+    background-image: url("../img/watermark.png");
+    background-repeat: no-repeat;
+    background-size: 449px 100%;
+}
+.ticket-infoline-container{
+    font-family: 'Work Sans', sans-serif;
+    font-weight:500 !important;
+    margin-top:22px;
+    float:left;
+    width:449px;
+    height:100%;
+    text-align: center;
+
+}
+.ticket-infoline{
+    height:20%;
+}
+.ticket-infoline:nth-child(1){
+    font-size:30px;
+    font-weight:bold;
+}
+.ticket-verticalline{
+    font-family: 'Work Sans', sans-serif;
+    font-weight:400;
+    float:right;
+    width:150px;
+    height:100%;
+    border-left:1px solid #bbb;
+    text-align: center;
+}
+.ticket-verticalline img{
+    width:150px;
+    height:150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
