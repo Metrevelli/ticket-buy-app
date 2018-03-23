@@ -9,6 +9,9 @@
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"/> -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.ticket.css"/>
+    <script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/canvas2image.js"></script>
 </head>
 <body>
     <div class="ticket">
@@ -27,8 +30,30 @@
             <br>
             <span class="ticket-infoline">Rustaveli Ave. 123 Something Something</span>
         </div>
-
         <div class="ticket-verticalline"><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=TEST&choe=UTF-8" />July 19, 2018 Show: 07:30PM</div>
     </div>
+    <!-- <input type="button" id="btnSave" />
+    <div id="img-out"></div> -->
+    <br/>
 </body>
+<script type="text/javascript">
+$(document).ready(html2canvas(document.querySelector(".ticket")).then(canvas => {
+    document.body.appendChild(canvas)
+    // $( ".ticket" ).replaceWith(canvas);
+    Canvas2Image.saveAsImage(canvas,600,200,'png');
+}));
+    // $(document).ready(
+    //     $("#btnSave").click(function() { 
+    //         html2canvas(document.querySelector(".ticket"), {
+    //             onrendered: function(canvas) {
+    //                 theCanvas = canvas;
+    //                 // document.body.appendChild(canvas);
+    //                 document.body.appendChild(theCanvas)
+    //                 Canvas2Image.saveAsPNG(theCanvas,600,200);
+    //                 // Clean up 
+    //                 //document.body.removeChild(canvas);
+    //             }
+    //         });
+    //     }));
+</script>
 </html>
