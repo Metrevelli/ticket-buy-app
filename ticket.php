@@ -44,21 +44,7 @@
 <script type="text/javascript">
 $(document).ready(html2canvas(document.querySelector(".ticket")).then(canvas => {
     document.body.appendChild(canvas)
-    // $( ".ticket" ).replaceWith(canvas);
-    Canvas2Image.saveAsImage(canvas,600,200,'png');
+    Canvas2Image.saveAsPNG(canvas,600,200,"dada");
 }));
-    // $(document).ready(
-    //     $("#btnSave").click(function() { 
-    //         html2canvas(document.querySelector(".ticket"), {
-    //             onrendered: function(canvas) {
-    //                 theCanvas = canvas;
-    //                 // document.body.appendChild(canvas);
-    //                 document.body.appendChild(theCanvas)
-    //                 Canvas2Image.saveAsPNG(theCanvas,600,200);
-    //                 // Clean up 
-    //                 //document.body.removeChild(canvas);
-    //             }
-    //         });
-    //     }));
 </script>
 </html>
