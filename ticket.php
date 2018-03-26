@@ -1,4 +1,9 @@
-<?php require 'vendor/autoload.php'; ?>
+<?php 
+    require 'vendor/autoload.php';
+    include 'phpqrcode/qrlib.php';
+    QRcode::png('code data text', 'filename.png'); // creates file 
+// QRcode::png('some othertext 1234'); // creates code image and outputs it directly into browser
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +35,7 @@
             <br>
             <span class="ticket-infoline">Rustaveli Ave. 123 Something Something</span>
         </div>
-        <div class="ticket-verticalline"><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=TEST&choe=UTF-8" />July 19, 2018 Show: 07:30PM</div>
+        <div class="ticket-verticalline"><img src="<?='./filename.png'?>" />July 19, 2018 Show: 07:30PM</div>
     </div>
     <!-- <input type="button" id="btnSave" />
     <div id="img-out"></div> -->
